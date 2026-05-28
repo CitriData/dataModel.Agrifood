@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://citridata.github.io/dataModel.Agrifood/InternationalCitrusTrade/schema.json",
+  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/InternationalCitrusTrade/schema.json",
   "title": "Smart Data Models - InternationalCitrusTrade",
   "description": "Data model for international market trade statistics of citrus products, aligned with international trade schemas like UN Comtrade.",
   "type": "object",
