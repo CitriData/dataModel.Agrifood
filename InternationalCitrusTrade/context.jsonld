@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "InternationalCitrusTrade": "https://citridata.github.io/dataModel.Agrifood/InternationalCitrusTrade",
+    
+    "cmdDesc": "https://schema.org/description",
+    "flowDesc": "https://schema.org/tradeAction",
+    "reporterDesc": "https://schema.org/country",
+    "partnerDesc": "https://schema.org/country",
+    "qty": "https://schema.org/quantity",
+    "qtyUnitAbbr": "https://schema.org/unitCode",
+    "refYear": "https://schema.org/temporalCoverage",
+    "refMonth": "https://schema.org/temporalCoverage",
+    "fobvalue": "https://schema.org/price",
+    "cifvalue": "https://schema.org/price",
+    "period": "https://schema.org/DateTime",
+    
+    "classificationCode": "http://data.un.org/vocabulary/comtrade#classificationCode",
+    "customsCode": "http://data.un.org/vocabulary/comtrade#customsCode",
+    "flowCode": "http://data.un.org/vocabulary/comtrade#flowCode",
+    "grossWgt": "http://data.un.org/vocabulary/comtrade#grossWeight",
+    "netWgt": "http://data.un.org/vocabulary/comtrade#netWeight",
+    "partnerISO": "https://schema.org/addressCountry",
+    "reporterISO": "https://schema.org/addressCountry",
+    
+    "isAggregate": "http://data.un.org/vocabulary/comtrade#isAggregate",
+    "isQtyEstimated": "http://data.un.org/vocabulary/comtrade#isQtyEstimated",
+    "isNetWgtEstimated": "http://data.un.org/vocabulary/comtrade#isNetWgtEstimated",
+    "isGrossWgtEstimated": "http://data.un.org/vocabulary/comtrade#isGrossWgtEstimated"
+  }
+}

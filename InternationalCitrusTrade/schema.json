@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://citridata.github.io/dataModel.Agrifood/InternationalCitrusTrade/schema.json",
+  "title": "Smart Data Models - InternationalCitrusTrade",
+  "description": "Data model for international market trade statistics of citrus products, aligned with international trade schemas like UN Comtrade.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "period",
+    "reporterCode",
+    "partnerCode",
+    "flowCode"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Unique identifier of the entity."
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "InternationalCitrusTrade"
+      ],
+      "description": "NGSI Entity type. It must be InternationalCitrusTrade."
+    },
+    "cmdDesc": {
+      "type": "string",
+      "description": "Commodity description (e.g., 'Oranges, fresh or dried')."
+    },
+    "flowDesc": {
+      "type": "string",
+      "description": "Description of the trade flow (e.g., Import, Export)."
+    },
+    "reporterDesc": {
+      "type": "string",
+      "description": "Country or region reporting the trade."
+    },
+    "partnerDesc": {
+      "type": "string",
+      "description": "Primary trading partner country or region."
+    },
+    "qty": {
+      "type": "number",
+      "description": "Trade quantity."
+    },
+    "qtyUnitAbbr": {
+      "type": "string",
+      "description": "Abbreviation of the quantity unit."
+    },
+    "altQty": {
+      "type": "number",
+      "description": "Alternative trade quantity if applicable."
+    },
+    "altQtyUnitAbbr": {
+      "type": "string",
+      "description": "Abbreviation of the alternative quantity unit."
+    },
+    "refYear": {
+      "type": "integer",
+      "minimum": 1900,
+      "description": "Reference year of the trade record."
+    },
+    "refMonth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "description": "Reference month of the trade record."
+    },
+    "motDesc": {
+      "type": "string",
+      "description": "Mode of Transport description."
+    },
+    "cifvalue": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Cost, Insurance, and Freight (CIF) value."
+    },
+    "classificationCode": {
+      "type": "string",
+      "description": "Product classification code (e.g., HS code)."
+    },
+    "classificationSearchCode": {
+      "type": "string",
+      "description": "Search code used for the classification."
+    },
+    "customsCode": {
+      "type": "string",
+      "description": "Customs procedure code."
+    },
+    "customsDesc": {
+      "type": "string",
+      "description": "Description of the customs procedure."
+    },
+    "flowCode": {
+      "type": "string",
+      "description": "Code identifying the trade flow type."
+    },
+    "fobvalue": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Free on Board (FOB) value."
+    },
+    "freqCode": {
+      "type": "string",
+      "description": "Frequency code (e.g., Monthly, Annual)."
+    },
+    "grossWgt": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Gross weight in kilograms."
+    },
+    "isAggregate": {
+      "type": "boolean",
+      "description": "Flag indicating if the data is aggregated."
+    },
+    "aggrLevel": {
+      "type": "integer",
+      "description": "Level of data aggregation."
+    },
+    "isAltQtyEstimated": {
+      "type": "boolean",
+      "description": "Flag indicating if the alternative quantity is estimated."
+    },
+    "isGrossWgtEstimated": {
+      "type": "boolean",
+      "description": "Flag indicating if the gross weight is estimated."
+    },
+    "isLeaf": {
+      "type": "boolean",
+      "description": "Flag indicating if this is the lowest level of the product classification tree."
+    },
+    "isNetWgtEstimated": {
+      "type": "boolean",
+      "description": "Flag indicating if the net weight is estimated."
+    },
+    "isOriginalClassification": {
+      "type": "boolean",
+      "description": "Flag indicating if original classification was used."
+    },
+    "isQtyEstimated": {
+      "type": "boolean",
+      "description": "Flag indicating if the quantity is estimated."
+    },
+    "isReported": {
+      "type": "boolean",
+      "description": "Flag indicating if the data was explicitly reported by the country."
+    },
+    "legacyEstimationFlag": {
+      "type": "string",
+      "description": "Legacy system flag for estimations."
+    },
+    "mosCode": {
+      "type": "string",
+      "description": "Mode of Supply code."
+    },
+    "motCode": {
+      "type": "string",
+      "description": "Mode of Transport code."
+    },
+    "netWgt": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Net weight in kilograms."
+    },
+    "partner2Code": {
+      "type": "string",
+      "description": "Code of the secondary partner country (e.g., country of origin/consignment)."
+    },
+    "partner2Desc": {
+      "type": "string",
+      "description": "Description of the second partner country."
+    },
+    "partner2ISO": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ISO code of the second partner country."
+    },
+    "partnerCode": {
+      "type": "string",
+      "description": "Code of the primary partner country."
+    },
+    "partnerISO": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ISO code of the primary partner country."
+    },
+    "period": {
+      "type": "string",
+      "description": "The period of the trade data (Format: YYYYMM)."
+    },
+    "primaryValue": {
+      "type": "number",
+      "description": "The primary statistical value recorded."
+    },
+    "qtyUnitCode": {
+      "type": "integer",
+      "description": "Code for the quantity unit."
+    },
+    "altQtyUnitCode": {
+      "type": "integer",
+      "description": "Code for the alternative quantity unit."
+    },
+    "refPeriodId": {
+      "type": "string",
+      "description": "Internal reference period identifier."
+    },
+    "reporterCode": {
+      "type": "string",
+      "description": "Code of the reporting country."
+    },
+    "reporterISO": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ISO code of the reporting country."
+    },
+    "typeCode": {
+      "type": "string",
+      "description": "Type code of the trade record (e.g., Goods/Services)."
+    }
+  }
+}
