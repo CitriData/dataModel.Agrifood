@@ -22,12 +22,12 @@
       "properties": {
         "type": {
           "type": "string",
-          "description": "Property. NGSI Entity Type. It has to be 11.",
+          "description": "Property. NGSI Entity Type. It has to be VineyardMildewEvolution.",
           "enum": [
             "VineyardMildewEvolution"
           ]
         },
-        "fecha_exploracion": {
+        "fechaExploracion": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha de exploración"
@@ -36,136 +36,136 @@
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text'. Estado Maduración"
         },
-        "porcentaje_acumulado_maduracion": {
+        "porcentajeAcumuladoMaduracion": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Porcentaje Acumulado Maduración"
         },
-        "fecha_maduracion": {
+        "fechaMaduracion": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha Maduración"
         },
-        "puede_germinar": {
+        "puedeGerminar": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Puede Germinar"
         },
-        "lluvia_acumulada_48h": {
+        "lluviaAcumulada48h": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Lluvia Acumulada 48h"
         },
-        "fecha_primera_germinacion": {
+        "fechaPrimeraGerminacion": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha Primera Germinación"
         },
-        "es_susceptible": {
+        "esSusceptible": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Susceptible"
         },
-        "fecha_susceptibilidad": {
+        "fechaSusceptibilidad": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha Susceptibilidad"
         },
-        "puede_infectar": {
+        "puedeInfectar": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Puede infectar"
         },
-        "mojado_foliar": {
+        "mojadoFoliar": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Mojado Foliar"
         },
-        "suma_25t": {
+        "suma25t": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Suma 25t"
         },
-        "fecha_infeccion": {
+        "fechaInfeccion": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha Infección"
         },
-        "puede_aparecer": {
+        "puedeAparecer": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Puede aparecer Mancha"
         },
-        "porcentaje_acumulado_goidanich": {
+        "porcentajeAcumuladoGoidanich": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. porcentaje Acumulado Goidanich"
         },
-        "fecha_incubacion_70": {
+        "fechaIncubacion70": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha Incubación 70"
         },
-        "fecha_incubacion_100": {
+        "fechaIncubacion100": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha Incubación 100"
         },
-        "infeccion_secundaria_hoy": {
+        "infeccionSecundariaHoy": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Infección Secundaria Hoy"
         },
-        "fecha_primera_infeccion_secundaria": {
+        "fechaPrimeraInfeccionSecundaria": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha primera infección secundaria"
         },
-        "fechas_fallidas_segunda_infeccion": {
+        "fechasFallidasSegundaInfeccion": {
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text'. Fechas Fallidas Segunda Infección"
         },
-        "temp_media_dia": {
+        "tempMediaDia": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Temperatura Media Diaria"
         },
-        "temp_max_dia": {
+        "tempMaxDia": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Temperatura Máxima Diaria"
         },
-        "temp_min_dia": {
+        "tempMinDia": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Temperatura Mínima Diaria"
         },
-        "humedad_media_dia": {
+        "humedadMediaDia": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Humedad Media Diaria"
         },
-        "precipitacion_dia": {
+        "precipitacionDia": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Precipitación Diaria"
         },
-        "esporulacion_nocturna_hoy": {
+        "esporulacionNocturnaHoy": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Esporulación Nocturna Hoy"
         },
-        "sporas_inviables_por_calor_hoy": {
+        "sporasInviablesPorCalorHoy": {
           "type": "boolean",
           "description": "Property. Model:'https://schema.org/Boolean'. Esporas Inviables por Calor Hoy"
         },
-        "porcentaje_modelo": {
+        "porcentajeModelo": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Porcentaje del modelo"
         },
-        "horizonte_dias": {
+        "horizonteDias": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Horizonte días"
         },
-        "fecha_emision": {
+        "fechaEmision": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha de emision"
         },
-        "fecha_solicitada": {
+        "fechaSolicitada": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/Text'. Fecha de solicitada"
         },
-        "fecha_objetivo": {
+        "fechaObjetivo": {
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text'. Fecha objetivo"
         },
-        "probabilidad_primera_mancha_hoy": {
+        "probabilidadPrimeraManchaHoy": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Probabilidad primera mancha hoy"
         }
@@ -177,5 +177,17 @@
     "type"
   ],
   "derivedFrom": "SDM Schema",
-  "license": "CC BY 4.0 ES"
+  "license": "CC BY 4.0 ES",
+  "source": [
+    {
+      "source": "Estaciones SiAR - Estaciones de Andalucia",
+      "dataset": "VineyardMildewEvolution",
+      "license_name": "CC BY 4.0 ES"
+    },
+    {
+      "source": "Estaciones Ecowitt - Desplegadas en Montilla/Moriles",
+      "dataset": "VineyardMildewEvolution",
+      "license_name": "CC BY 4.0 ES"
+    }
+  ]
 }
