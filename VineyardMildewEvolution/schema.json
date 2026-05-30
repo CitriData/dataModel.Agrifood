@@ -1,0 +1,181 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://citridata.github.io/dataModel.Agrifood/11/schema.json",
+  "title": "11",
+  "modelTags": [
+    "11",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
+  "description": "11",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be 11.",
+          "enum": [
+            "11"
+          ]
+        },
+        "fecha_exploracion": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha de exploración"
+        },
+        "status": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Estado Maduración"
+        },
+        "porcentaje_acumulado_maduracion": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Porcentaje Acumulado Maduración"
+        },
+        "fecha_maduracion": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Maduración"
+        },
+        "puede_germinar": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Puede Germinar"
+        },
+        "lluvia_acumulada_48h": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Lluvia Acumulada 48h"
+        },
+        "fecha_primera_germinacion": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Primera Germinación"
+        },
+        "es_susceptible": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Susceptible"
+        },
+        "fecha_susceptibilidad": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Susceptibilidad"
+        },
+        "puede_infectar": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Puede infectar"
+        },
+        "mojado_foliar": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Mojado Foliar"
+        },
+        "suma_25t": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Suma 25t"
+        },
+        "fecha_infeccion": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Infección"
+        },
+        "puede_aparecer": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Puede aparecer Mancha"
+        },
+        "porcentaje_acumulado_goidanich": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. porcentaje Acumulado Goidanich"
+        },
+        "fecha_incubacion_70": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Incubación 70"
+        },
+        "fecha_incubacion_100": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Incubación 100"
+        },
+        "infeccion_secundaria_hoy": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Infección Secundaria Hoy"
+        },
+        "fecha_primera_infeccion_secundaria": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha primera infección secundaria"
+        },
+        "fechas_fallidas_segunda_infeccion": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Fechas Fallidas Segunda Infección"
+        },
+        "temp_media_dia": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Temperatura Media Diaria"
+        },
+        "temp_max_dia": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Temperatura Máxima Diaria"
+        },
+        "temp_min_dia": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Temperatura Mínima Diaria"
+        },
+        "humedad_media_dia": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Humedad Media Diaria"
+        },
+        "precipitacion_dia": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Precipitación Diaria"
+        },
+        "esporulacion_nocturna_hoy": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Esporulación Nocturna Hoy"
+        },
+        "sporas_inviables_por_calor_hoy": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Esporas Inviables por Calor Hoy"
+        },
+        "porcentaje_modelo": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Porcentaje del modelo"
+        },
+        "horizonte_dias": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Horizonte días"
+        },
+        "fecha_emision": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha de emision"
+        },
+        "fecha_solicitada": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha de solicitada"
+        },
+        "fecha_objetivo": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha objetivo"
+        },
+        "probabilidad_primera_mancha_hoy": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Probabilidad primera mancha hoy"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ],
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES"
+}
