@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/CitrusPriceObservatory/schema.json",
+  "title": "Observatorio de Precios Cítrícolas en Andalucía",
+  "modelTags": [
+    "CitrusPriceObservatory",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
+  "description": "Este modelo de datos está diseñado para registrar, analizar y estandarizar las cotizaciones económicas y los precios de mercado del sector de los cítricos (naranjas, mandarinas, limones, pomelos, entre otros) en Andalucia desde el 2010 al 2025",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be CitrusPriceObservatory.",
+          "enum": [
+            "CitrusPriceObservatory"
+          ]
+        },
+        "startWeek": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha inicio"
+        },
+        "endWeek": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Fin"
+        },
+        "group": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Grupo"
+        },
+        "sector": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Sector"
+        },
+        "subSector": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Sub Sector"
+        },
+        "product": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Producto"
+        },
+        "typeProduct": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Tipo de producto"
+        },
+        "subtypeProduct": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Subtipo de producto"
+        },
+        "position": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Posición"
+        },
+        "category": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Categoría"
+        },
+        "format": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Formato"
+        },
+        "channel": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Canal"
+        },
+        "price": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Precio"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Unidad"
+        },
+        "year": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Año"
+        },
+        "week": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Semana"
+        },
+        "dataOwner": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Propietario del dato"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Proveedor del dato"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ],
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES"
+}
