@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$schemaVersion": "0.0.1",
-  "$id": "https://citridata.github.io/dataModel.Agrifood/WholesaleMarket/schema.json",
+  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/WholesaleMarket/schema.json",
   "title": "Mercados mayoristas de España",
   "modelTags": [
     "WholesaleMarket",
@@ -71,8 +71,5 @@
     "type"
   ],
   "derivedFrom": "SDM Schema",
-  "license": "CC BY 4.0 ES",
-  "source": "",
-  "dataset": "",
-  "license_name": ""
+  "license": "CC BY 4.0 ES"
 }
