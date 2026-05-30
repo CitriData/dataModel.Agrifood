@@ -178,16 +178,4 @@
   ],
   "derivedFrom": "SDM Schema",
   "license": "CC BY 4.0 ES",
-  "source": [
-    {
-      "source": "Estaciones SiAR - Estaciones de Andalucia",
-      "dataset": "VineyardMildewEvolution",
-      "license_name": "CC BY 4.0 ES"
-    },
-    {
-      "source": "Estaciones Ecowitt - Desplegadas en Montilla/Moriles",
-      "dataset": "VineyardMildewEvolution",
-      "license_name": "CC BY 4.0 ES"
-    }
-  ]
 }
