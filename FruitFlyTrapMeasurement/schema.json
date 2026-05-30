@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://citridata.github.io/dataModel.Agrifood/FruitFlyTrapMeasurement/schema.json",
+  "title": "Monitorización de Ceratitis",
+  "modelTags": [
+    "FruitFlyTrapMeasurement",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
+  "description": "Monitorización de Ceratitis del parcelario Citrícola Andaluz para los años 2023 y 2024",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be FruitFlyTrapMeasurement.",
+          "enum": [
+            "FruitFlyTrapMeasurement"
+          ]
+        },
+        "dateLoad": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Año de referencia valores"
+        },
+        "mtd": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Moscas Trampa Día"
+        },
+        "nuArea": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Área Total de las parcelas cítrico en el Polígono"
+        },
+        "flyTraps": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Trampas por polígono"
+        },
+        "flyCapture": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Capturas totales"
+        },
+        "pdteAvg": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Pendiente media del Polígono"
+        },
+        "deraNombre": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Nombre del Paisaje"
+        },
+        "deraPaisaje": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Tipo de Paisaje"
+        },
+        "deraArea": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Areas de Paisaje"
+        },
+        "deraUnidad": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Unidad Fisiografica Terrestre"
+        },
+        "deraSist": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Sistema Fisiografico Terreste"
+        },
+        "deraFisio": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Valor Fisioiografico Único"
+        },
+        "deraDomin": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Dominio Fisiografico"
+        },
+        "deraAltim": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Valor de la altimetria"
+        },
+        "deraRango": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Rango altimetrico"
+        },
+        "deraTipo": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Tipo de Clima"
+        },
+        "location": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Latitud/Longitud"
+        },
+        "dataOwner": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Propietario del Dato"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Dato"
+        },
+        "datecreate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha Creación"
+        },
+        "lat": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Latitud centroide"
+        },
+        "lon": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Longitud centroide"
+        },
+        "nWeek": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Número Semana"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ],
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES",
+  "source": "",
+  "dataset": "",
+  "license_name": ""
+}
