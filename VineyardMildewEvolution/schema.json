@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$schemaVersion": "0.0.1",
-  "$id": "https://citridata.github.io/dataModel.Agrifood/VineyardMildewEvolution/schema.json",
+  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/VineyardMildewEvolution/schema.json",
   "title": "Seguimiento Mildiu Montilla/Moriles Año 2026",
   "modelTags": [
     "VineyardMildewEvolution",
