@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/VirtualAgroWeatherStation/schema.json",
+  "title": "Estaciones Virtuales Zona Montilla/Moriles",
+  "modelTags": [
+    "VirtualAgroWeatherStation",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
+  "description": "Estaciones que se alimentan de modelos de predicción y reanálisis de alta resolución (como IFS de ECMWF y ERA5-Land a través de Open-Meteo) referenciados a unas coordenadas geográficas exactas en Montilla-Moriles.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Descripción"
+        },
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be VirtualAgroWeatherStation.",
+          "enum": [
+            "VirtualAgroWeatherStation"
+          ]
+        },
+        "temperature": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Temperatura"
+        },
+        "humidity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Humedad"
+        },
+        "radiacion": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Radiación"
+        },
+        "windDir": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Dirección Viento"
+        },
+        "windVel": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Velocidad Viento"
+        },
+        "pluviometer": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Precipitaciones"
+        },
+        "dataOwner": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Propietario del Dato"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Dato"
+        },
+        "location": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Latitud/Longitud"
+        },
+        "datecreate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Update"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ],
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES"
+}
