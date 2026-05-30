@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://citridata.github.io/dataModel.Agrifood/WholesaleMarket/schema.json",
+  "title": "Mercados mayoristas de España",
+  "modelTags": [
+    "WholesaleMarket",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
+  "description": "Modelo de datos diseñado para representar la actividad, precios de cotización e infraestructura de los mercados mayoristas de alimentación. Permite registrar el volumen de mercancías entrantes/salientes, los precios máximos, mínimos y modales por variedad de producto, y la gestión operativa de las plataformas logísticas alimentarias. Datos del año 2020 al 2024",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be WholesaleMarket.",
+          "enum": [
+            "WholesaleMarket"
+          ]
+        },
+        "startPrice": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Precio Inicio Periodo"
+        },
+        "endPrice": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Precio Fin Periodo"
+        },
+        "market": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Mercado"
+        },
+        "product": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Producto"
+        },
+        "period": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Periodo de Exploración"
+        },
+        "year": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Año"
+        },
+        "week": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Semana"
+        },
+        "dataOwner": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Propietario del dato"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Proveedor del dato"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ],
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES",
+  "source": "",
+  "dataset": "",
+  "license_name": ""
+}
