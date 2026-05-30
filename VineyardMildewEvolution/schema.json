@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$schemaVersion": "0.0.1",
-  "$id": "https://citridata.github.io/dataModel.Agrifood/11/schema.json",
-  "title": "11",
+  "$id": "https://citridata.github.io/dataModel.Agrifood/VineyardMildewEvolution/schema.json",
+  "title": "Seguimiento Mildiu Montilla/Moriles Año 2026",
   "modelTags": [
-    "11",
+    "VineyardMildewEvolution",
     "CitriData",
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "11",
+  "description": "Modelo para el seguimiento predictivo del mildiu (Plasmopara viticola) en viticultura. Cuantifica el impacto de las condiciones ambientales sobre el desarrollo de la enfermedad para el soporte a la toma de decisiones agrícolas.",
   "type": "object",
   "allOf": [
     {
@@ -24,7 +24,7 @@
           "type": "string",
           "description": "Property. NGSI Entity Type. It has to be 11.",
           "enum": [
-            "11"
+            "VineyardMildewEvolution"
           ]
         },
         "fecha_exploracion": {
