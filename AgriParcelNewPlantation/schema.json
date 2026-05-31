@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/AgriParcelNewPlantation/schema.json",
+  "title": "Nuevas Plantaciones Palma del Río, Córdoba (España)",
+  "modelTags": [
+    "AgriParcelNewPlantation",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
+  "description": "Modelo de datos diseñado para catalogar y monitorizar geográficamente parcelas agrícolas de nueva implantación del Término Municipal de Palma del Río, Córdoba (España). Año de carga 2023.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be AgriParcelNewPlantation.",
+          "enum": [
+            "AgriParcelNewPlantation"
+          ]
+        },
+        "dateLoad": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Año de referencia valores"
+        },
+        "idClasifica": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Clasificación"
+        },
+        "idCobertura": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Cobertura"
+        },
+        "cambioUso": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Cambio de uso"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Dato"
+        },
+        "dataOwner": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Propietario del Dato"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ],
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES"
+}
