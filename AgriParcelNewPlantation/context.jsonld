@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "AgriParcelNewPlantation": "https://github.com/CitriData/dataModel.Agrifood/blob/main/AgriParcelNewPlantation",
+
+    "entity_id": "https://schema.org/Text",
+    "dateLoad": "https://schema.org/Text",
+    "idClasifica": "https://schema.org/Text",
+    "idCobertura": "https://schema.org/Text",
+    "cambioUso": "https://schema.org/Text",
+    "dataProvider": "https://schema.org/Text",
+    "dataOwner": "https://schema.org/Text",
+    "location": "https://schema.org/polygon"
+  }
+}

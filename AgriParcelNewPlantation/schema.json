@@ -1,15 +1,15 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$schemaVersion": "0.0.1",
-  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/AgriParcelNewPlantation/schema.json",
-  "title": "Nuevas Plantaciones Palma del Río, Córdoba (España)",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/AgriParcelNewPlantation/schema.json",
+  "title": "AgriParcelNewPlantation",
   "modelTags": [
     "AgriParcelNewPlantation",
     "CitriData",
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "Modelo de datos diseñado para catalogar y monitorizar geográficamente parcelas agrícolas de nueva implantación del Término Municipal de Palma del Río, Córdoba (España). Año de carga 2023.",
+  "description": "Data model designed to geographically catalog and monitor newly established agricultural parcels in the municipality of Palma del Río, Córdoba (Spain). Load year: 2023.",
   "type": "object",
   "allOf": [
     {
@@ -20,6 +20,11 @@
     },
     {
       "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Unique identifier of the entity."
+        },
         "type": {
           "type": "string",
           "description": "Property. NGSI Entity Type. It has to be AgriParcelNewPlantation.",
@@ -29,27 +34,31 @@
         },
         "dateLoad": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Año de referencia valores"
+          "description": "Property. Model:'https://schema.org/Text'. Reference year for the values."
         },
         "idClasifica": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Clasificación"
+          "description": "Property. Model:'https://schema.org/Text'. Classification."
         },
         "idCobertura": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Cobertura"
+          "description": "Property. Model:'https://schema.org/Text'. Coverage."
         },
         "cambioUso": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Cambio de uso"
+          "description": "Property. Model:'https://schema.org/Text'. Land use change."
+        },
+        "location": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/GeoShape'. Array of longitude/latitude coordinates representing the geometry of the plot."
         },
         "dataProvider": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data provider."
         },
         "dataOwner": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Propietario del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data owner."
         }
       }
     }
