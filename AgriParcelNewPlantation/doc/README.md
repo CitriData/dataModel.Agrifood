@@ -27,19 +27,19 @@ versión: 0.0.1
 
 - `type[string]`: Property. NGSI Entity Type. It has to be AgriParcelNewPlantation.
 
-- `dateLoad[string]`: Property. Model:'https://schema.org/Text'. Reference year for the values. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `dateLoad[string]`: Property. Model:'https://schema.org/Text'. Reference year for the values.
 
-- `idClasifica[string]`: Property. Model:'https://schema.org/Text'. Classification. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `idClasifica[string]`: Property. Model:'https://schema.org/Text'. Classification.
 
-- `idCobertura[string]`: Property. Model:'https://schema.org/Text'. Coverage. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `idCobertura[string]`: Property. Model:'https://schema.org/Text'. Coverage.
 
-- `cambioUso[string]`: Property. Model:'https://schema.org/Text'. Land use change. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `cambioUso[string]`: Property. Model:'https://schema.org/Text'. Land use change.
 
-- `location[object]`: Property. Model:'https://schema.org/GeoShape'. Array of longitude/latitude coordinates representing the geometry of the plot. . Model: [https://schema.org/GeoShape](https://schema.org/GeoShape)
+- `location[object]`: Property. Model:'https://schema.org/GeoShape'. Array of longitude/latitude coordinates representing the geometry of the plot.
 
-- `dataProvider[string]`: Property. Model:'https://schema.org/Text'. Data provider. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `dataProvider[string]`: Property. Model:'https://schema.org/Text'. Data provider.
 
-- `dataOwner[string]`: Property. Model:'https://schema.org/Text'. Data owner. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `dataOwner[string]`: Property. Model:'https://schema.org/Text'. Data owner.
 
 <!-- /30-PropertiesList -->
  

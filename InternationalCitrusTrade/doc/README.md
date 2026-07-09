@@ -1,6 +1,4 @@
 <!-- 10-Header --> 
-[ 
-
 Entidad: InternationalCitrusTrade 
 =================
 <!-- /10-Header -->
@@ -26,29 +24,29 @@ versión: 0.0.1
 
 - `id[string]`: Unique identifier of the entity.
 
-- `aggrLevel[number]`: Property. Model:'https://schema.org/Number'. Units: 'Code'. Level of data aggregation. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `aggrLevel[number]`: Property. Model:'https://schema.org/Number'. Units: 'Code'. Level of data aggregation.
 
-- `altQty[number]`: Property. Model:'https://schema.org/Number'. Units: 'altQtyUnitAbbr'. Alternative trade quantity if applicable. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `altQty[number]`: Property. Model:'https://schema.org/Number'. Units: 'altQtyUnitAbbr'. Alternative trade quantity if applicable.
 
-- `altQtyUnitAbbr[string]`: Property. Model:'https://schema.org/Text'. Units: 'Alternative units'. Abbreviation of the alternative quantity unit. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `altQtyUnitAbbr[string]`: Property. Model:'https://schema.org/Text'. Units: 'Alternative units'. Abbreviation of the alternative quantity u
 
-- `altQtyUnitCode[number]`: Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the alternative quantity unit. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `altQtyUnitCode[number]`: Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the alternative quantity unit.
 
-- `cifvalue[number]`: Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. Cost, Insurance, and Freight (CIF) value. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `cifvalue[number]`: Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. Cost, Insurance, and Freight (CIF) value.
 
-- `classificationCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Product classification code. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `classificationCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Product classification c
 
-- `classificationSearchCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Search code used for the classification. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `classificationSearchCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Search code used for the classificat
 
-- `cmdDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Products'. Commodity description . Model: [https://schema.org/Text](https://schema.org/Text)
+- `cmdDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Products'. Commodity descrip
 
-- `customsCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Customs procedure code. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `customsCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Customs procedure c
 
-- `customsDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Customs Procedure'. Description of the customs procedure. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `customsDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Customs Procedure'. Description of the customs proced
 
-- `flowCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code identifying the trade flow type. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `flowCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code identifying the trade flow t
 
-- `flowDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Flow'. Description of the trade flow . Model: [https://schema.org/Text](https://schema.org/Text)
+- `flowDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Flow'. Description of the trade 
 
 - `fobvalue[number]`: Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. Free on Board (FOB) value. . Model: [https://schema.org/Number](https://schema.org/Number)
 
@@ -75,51 +73,51 @@ versión: 0.0.1
 
 - `legacyEstimationFlag[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Legacy system flag for estimations. . Model: [https://schema.org/Text](https://schema.org/Text)
 
-- `mosCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Supply code. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `mosCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Supply code.
 
-- `motCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Transport code. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `motCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Transport code.
 
-- `motDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Mode of Transport'. Mode of Transport description. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `motDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Mode of Transport'. Mode of Transport description.
 
-- `netWgt[number]`: Property. Model:'https://schema.org/Number'. Units: 'kg'. Net weight. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `netWgt[number]`: Property. Model:'https://schema.org/Number'. Units: 'kg'. Net weight.
 
-- `partner2Code[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the secondary partner country. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `partner2Code[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the secondary partner country.
 
-- `partner2Desc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Country'. Description of the second partner country. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `partner2Desc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Country'. Description of the second partner country.
 
-- `partner2ISO[string]`: Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO Code of the secondary partner country. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `partner2ISO[string]`: Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO Code of the secondary partner country.
 
-- `partnerCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the primary partner country. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `partnerCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the primary partner country.
 
-- `partnerDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Country'. Primary trading partner country or region. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `partnerDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Country'. Primary trading partner country or region.
 
-- `partnerISO[string]`: Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the primary partner country. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `partnerISO[string]`: Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the primary partner country.
 
-- `period[string]`: Property. Model:'https://schema.org/Text'. Units: 'YYYYMM'. The period of the trade data. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `period[string]`: Property. Model:'https://schema.org/Text'. Units: 'YYYYMM'. The period of the trade data.
 
-- `primaryValue[number]`: Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. The primary statistical value recorded. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `primaryValue[number]`: Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. The primary statistical value recorded.
 
-- `qty[number]`: Property. Model:'https://schema.org/Number'. Units: 'qtyUnitAbbr'. Trade quantity . Model: [https://schema.org/Number](https://schema.org/Number)
+- `qty[number]`: Property. Model:'https://schema.org/Number'. Units: 'qtyUnitAbbr'. Trade quantity
 
-- `qtyUnitAbbr[string]`: Property. Model:'https://schema.org/Text'. Units: 'SI Units'. Abbreviation of the quantity unit. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `qtyUnitAbbr[string]`: Property. Model:'https://schema.org/Text'. Units: 'SI Units'. Abbreviation of the quantity unit.
 
-- `qtyUnitCode[number]`: Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the quantity unit. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `qtyUnitCode[number]`: Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the quantity unit.
 
-- `refMonth[number]`: Property. Model:'https://schema.org/Number'. Units: 'MM'. Reference month of the trade record. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `refMonth[number]`: Property. Model:'https://schema.org/Number'. Units: 'MM'. Reference month of the trade record.
 
-- `refPeriodId[string]`: Property. Model:'https://schema.org/Text'. Units: 'YYYYMM00'. Internal reference period identifier. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `refPeriodId[string]`: Property. Model:'https://schema.org/Text'. Units: 'YYYYMM00'. Internal reference period identifier.
 
-- `refYear[number]`: Property. Model:'https://schema.org/Number'. Units: 'YYYY'. Reference year of the trade record. . Model: [https://schema.org/Number](https://schema.org/Number)
+- `refYear[number]`: Property. Model:'https://schema.org/Number'. Units: 'YYYY'. Reference year of the trade record.
 
-- `reporterCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the reporting country. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `reporterCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the reporting country.
 
-- `reporterDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Country'. Country or region reporting the trade. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `reporterDesc[string]`: Property. Model:'https://schema.org/Text'. Units: 'Country'. Country or region reporting the trade.
 
-- `reporterISO[string]`: Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the reporting country. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `reporterISO[string]`: Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the reporting country.
 
 - `type[string]`: Property. NGSI Entity Type. It has to be InternationalCitrusTrade.
 
-- `typeCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Type code of the trade record. . Model: [https://schema.org/Text](https://schema.org/Text)
+- `typeCode[string]`: Property. Model:'https://schema.org/Text'. Units: 'Code'. Type code of the trade record.
 
 <!-- /30-PropertiesList -->
  
@@ -338,19 +336,33 @@ Aquí hay un ejemplo básico en formato key-values.
 
 ```json  
 
-{  
-  "id": "urn:ngsi-ld:InternationalCitrusTrade:example-001",  
-  "type": "InternationalCitrusTrade",  
-  "period": "exampleValue",  
-  "reporterCode": "exampleValue",  
-  "partnerCode": "exampleValue",  
-  "flowCode": "exampleValue",  
-  "cmdDesc": "example",  
-  "flowDesc": "example",  
-  "reporterDesc": "example",  
-  "partnerDesc": "example",  
-  "qty": 0,  
-  "qtyUnitAbbr": "example"  
+{
+  "id": "urn:ngsi-ld:InternationalCitrusTrade:COMTRADE-2026-05-ES-ORANGES",
+  "type": "InternationalCitrusTrade",
+  "period": "202605",
+  "refYear": 2026,
+  "refMonth": 5,
+  "cmdDesc": "Fresh lemons and limes",
+  "classificationCode": "080550",
+  "flowDesc": "Export",
+  "flowCode": "X",
+  "reporterDesc": "Spain",
+  "reporterISO": "ESP",
+  "reporterCode": "724",
+  "partnerDesc": "United Kingdom",
+  "partnerISO": "GBR",
+  "partnerCode": "826",
+  "qty": 450000,
+  "qtyUnitAbbr": "kg",
+  "qtyUnitCode": 8,
+  "netWgt": 450000,
+  "grossWgt": 462000,
+  "fobvalue": 380000.00,
+  "isAggregate": false,
+  "isQtyEstimated": false,
+  "isNetWgtEstimated": false,
+  "isLeaf": true,
+  "typeCode": "G"
 }
 
 ```  
