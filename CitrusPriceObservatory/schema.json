@@ -30,68 +30,68 @@
         "startWeek": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Start Date"
+          "description": "Property. Model:'https://schema.org/Text'. Start date of the reference week."
         },
         "endWeek": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. End Date"
+          "description": "Property. Model:'https://schema.org/Text'. End date of the reference week."
         },
         "group": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Group"
+          "description": "Property. Model:'https://schema.org/Text'. Agricultural group associated with the product."
         },
         "sector": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Sector"
+          "description": "Property. Model:'https://schema.org/Text'. Agricultural sector associated with the product."
         },
         "subSector": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Sub Sector"
+          "description": "Property. Model:'https://schema.org/Text'. Subsector associated with the product."
         },
         "product": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Product"
+          "description": "Property. Model:'https://schema.org/Text'. Commercial name of the agricultural product."
         },
         "typeProduct": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Product Type"
+          "description": "Property. Model:'https://schema.org/Text'. Type or classification of the product."
         },
         "subtypeProduct": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Product Subtype"
+          "description": "Property. Model:'https://schema.org/Text'. More specific classification or subtype of the product."
         },
         "position": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Position"
+          "description": "Property. Model:'https://schema.org/Text'. Position of the product within the commercialization chain."
         },
         "category": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Category"
+          "description": "Property. Model:'https://schema.org/Text'. Commercial quality category assigned to the product."
         },
         "format": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Format"
+          "description": "Property. Model:'https://schema.org/Text'. Commercial presentation or packaging format of the product."
         },
         "channel": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Channel"
+          "description": "Property. Model:'https://schema.org/Text'. Marketing or distribution channel where the price was recorded."
         },
         "price": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Price"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'EUR/kg'. Market price of the product during the reference week."
         },
         "unit": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Unit"
+          "description": "Property. Model:'https://schema.org/Text'. Unit of measurement used to express the reported price."
         },
         "year": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Year"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'YYYY'. Year corresponding to the market price."
         },
         "week": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Week"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'WW'. Calendar week corresponding to the market price."
         },
         "dataOwner": {
           "type": "string",
