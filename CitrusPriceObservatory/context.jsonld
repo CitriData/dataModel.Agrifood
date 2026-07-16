@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "CitrusPriceObservatory": "https://github.com/CitriData/dataModel.Agrifood/blob/main/CitrusPriceObservatory",
+
+    "startWeek": "https://schema.org/Text",
+    "endWeek": "https://schema.org/Text",
+    "group": "https://schema.org/Text",
+    "sector": "https://schema.org/Text",
+    "subSector": "https://schema.org/Text",
+    "product": "https://schema.org/Text",
+    "typeProduct": "https://schema.org/Text",
+    "subtypeProduct": "https://schema.org/Text",
+    "position": "https://schema.org/Text",
+    "category": "https://schema.org/Text",
+    "format": "https://schema.org/Text",
+    "channel": "https://schema.org/Text",
+    "price": "https://schema.org/Number",
+    "unit": "https://schema.org/Text",
+    "year": "https://schema.org/Number",
+    "week": "https://schema.org/Number",
+    "dataOwner": "https://schema.org/Text",
+    "dataProvider": "https://schema.org/Text"
+  }
+}

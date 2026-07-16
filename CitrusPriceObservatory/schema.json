@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$schemaVersion": "0.0.1",
-  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/CitrusPriceObservatory/schema.json",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/CitrusPriceObservatory/schema.json",
   "title": "Observatorio de Precios Cítrícolas en Andalucía",
   "modelTags": [
     "CitrusPriceObservatory",
@@ -9,7 +9,7 @@
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "Este modelo de datos está diseñado para registrar, analizar y estandarizar las cotizaciones económicas y los precios de mercado del sector de los cítricos (naranjas, mandarinas, limones, pomelos, entre otros) en Andalucia desde el 2010 al 2025",
+  "description": "This data model is designed to record, analyze and standardize the economic quotations and market prices of the citrus sector (oranges, mandarins, lemons, grapefruits, among others) in Andalusia from 2010 to 2025",
   "type": "object",
   "allOf": [
     {
@@ -30,16 +30,16 @@
         "startWeek": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha inicio"
+          "description": "Property. Model:'https://schema.org/Text'. Start Date"
         },
         "endWeek": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Fin"
+          "description": "Property. Model:'https://schema.org/Text'. End Date"
         },
         "group": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Grupo"
+          "description": "Property. Model:'https://schema.org/Text'. Group"
         },
         "sector": {
           "type": "string",
@@ -51,55 +51,55 @@
         },
         "product": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Producto"
+          "description": "Property. Model:'https://schema.org/Text'. Product"
         },
         "typeProduct": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Tipo de producto"
+          "description": "Property. Model:'https://schema.org/Text'. Product Type"
         },
         "subtypeProduct": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Subtipo de producto"
+          "description": "Property. Model:'https://schema.org/Text'. Product Subtype"
         },
         "position": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Posición"
+          "description": "Property. Model:'https://schema.org/Text'. Position"
         },
         "category": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Categoría"
+          "description": "Property. Model:'https://schema.org/Text'. Category"
         },
         "format": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Formato"
+          "description": "Property. Model:'https://schema.org/Text'. Format"
         },
         "channel": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Canal"
+          "description": "Property. Model:'https://schema.org/Text'. Channel"
         },
         "price": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Precio"
+          "description": "Property. Model:'https://schema.org/Number'. Price"
         },
         "unit": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Unidad"
+          "description": "Property. Model:'https://schema.org/Text'. Unit"
         },
         "year": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Año"
+          "description": "Property. Model:'https://schema.org/Number'. Year"
         },
         "week": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Semana"
+          "description": "Property. Model:'https://schema.org/Number'. Week"
         },
         "dataOwner": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Propietario del dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data Owner"
         },
         "dataProvider": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Proveedor del dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data Provider"
         }
       }
     }

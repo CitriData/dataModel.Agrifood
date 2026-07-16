@@ -1,0 +1,17 @@
+{
+  "type": "CitrusPriceObservatory",
+  "startWeek": "2010-10-04T00:00:00.000Z",
+  "endWeek": "2010-10-10T00:00:00.000Z",
+  "group": "Agrícola",
+  "sector": "Frutales",
+  "subSector": "Cítricos",
+  "product": "Limón",
+  "typeProduct": "Fino O Mesero",
+  "subtypeProduct": "Sin Especificar",
+  "position": "Árbol",
+  "category": "Sin Especificar",
+  "price": 0.3400000035762787,
+  "unit": "Euros/Kg",
+  "week": 40,
+  "year": 2010
+}
