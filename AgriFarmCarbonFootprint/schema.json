@@ -1,15 +1,15 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$schemaVersion": "0.0.1",
-  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/AgriFarmCarbonFootprint/schema.json",
-  "title": "Huella de carbono en fincas agro del sector citrícola en Andalucía.",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/AgriFarmCarbonFootprint/schema.json",
+  "title": "AgriFarmCarbonFootprint",
   "modelTags": [
     "AgriFarmCarbonFootprint",
     "CitriData",
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "Este modelo de datos está diseñado para cuantificar, estandarizar y registrar el balance de gases de efecto invernadero (GEI) en explotaciones agrícolas, con especial enfoque en el sector citrícola.",
+  "description": "This data model is designed to store geospatial and agronomic attributes of citrus farm plots in Andalusia, including soil characteristics, land use, irrigation, erosion indicators, and organic carbon metrics.",
   "type": "object",
   "allOf": [
     {
@@ -20,6 +20,11 @@
     },
     {
       "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Unique identifier of the entity."
+        },
         "type": {
           "type": "string",
           "description": "Property. NGSI Entity Type. It has to be AgriFarmCarbonFootprint.",
@@ -29,135 +34,119 @@
         },
         "area": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Área"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'ha'. Area"
         },
         "regadio": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Regadío"
+          "description": "Property. Model:'https://schema.org/Number'. Irrigated land"
         },
         "pdtMedia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Pendiente média"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Average slope"
         },
         "densidad": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Densidad"
+          "description": "Property. Model:'https://schema.org/Number'. Density"
         },
         "cob": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Cobertura (Sí/No)"
+          "description": "Property. Model:'https://schema.org/Text'. Coverage (Yes/No)"
         },
         "cobType": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Tipo de Cobertura"
+          "description": "Property. Model:'https://schema.org/Text'. Coverage Type"
         },
         "eroCau": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Erosión por cauces"
+          "description": "Property. Model:'https://schema.org/Number'. Gully erosion code."
         },
         "eroEol": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Erosión por Eólica"
+          "description": "Property. Model:'https://schema.org/Number'. Wind erosion code."
         },
         "eroLam": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Erosión Laminar"
+          "description": "Property. Model:'https://schema.org/Number'. Sheet erosion code."
         },
         "eroPot": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Erosión Potencial"
+          "description": "Property. Model:'https://schema.org/Number'. Potential erosion code"
         },
         "movMasas": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Movimiento de masas"
+          "description": "Property. Model:'https://schema.org/Number'. Mass movement code"
         },
         "codPais": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Cod. País"
+          "description": "Property. Model:'https://schema.org/Text'. Country code"
         },
         "nomPais": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre País"
+          "description": "Property. Model:'https://schema.org/Text'. Country name"
         },
         "codComunidad": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Comunidad"
+          "description": "Property. Model:'https://schema.org/Number'. Autonomous community code."
         },
         "nomComunidad": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre País"
+          "description": "Property. Model:'https://schema.org/Text'. Autonomous community name"
         },
         "codProvincia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Provincia"
+          "description": "Property. Model:'https://schema.org/Number'. Province code"
         },
         "nomProvincia": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre Provincia"
+          "description": "Property. Model:'https://schema.org/Text'. Province name"
         },
         "codMunicipio": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Municipio"
+          "description": "Property. Model:'https://schema.org/Number'. Municipality code"
         },
         "nomMunicipio": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre Municipio"
+          "description": "Property. Model:'https://schema.org/Text'. Municipality name"
         },
         "codZona": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Zona"
+          "description": "Property. Model:'https://schema.org/Number'. Zone code"
         },
         "codPoligono": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Polígono"
+          "description": "Property. Model:'https://schema.org/Number'. Polygon code"
         },
         "codParcela": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Cod. Parcela"
+          "description": "Property. Model:'https://schema.org/Number'. Parcel code"
         },
         "dateLoad": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Año de referencia valores"
-        },
-        "co30max": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Carbono Orgánico Máximo (30)"
+          "description": "Property. Model:'https://schema.org/Text'. Reference year for values"
         },
         "co30mean": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Carbono Orgánico Media (30)"
-        },
-        "co30min": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Carbono Orgánico Mínimo (30)"
-        },
-        "co60max": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Carbono Orgánico Máximo (60)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '% por cada 100g de suelo'. Organic Carbon Mean (30)"
         },
         "co60mean": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Carbono Orgánico Media (60)"
-        },
-        "co60min": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Carbono Orgánico Mínimo (60)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '% por cada 100g de suelo'. Organic Carbon Mean (60)"
         },
         "dataOwner": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Propietario del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data owner"
         },
         "dataProvider": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data provider"
         },
         "lat": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Latitud"
+          "description": "Property. Model:'https://schema.org/Number'. Latitude"
         },
         "lon": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Longitud"
+          "description": "Property. Model:'https://schema.org/Number'. Longitude"
         }
       }
     }

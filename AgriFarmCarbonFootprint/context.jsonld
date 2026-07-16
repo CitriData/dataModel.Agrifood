@@ -1,0 +1,36 @@
+{
+  "@context": {
+    "AgriFarmCarbonFootprint": "https://github.com/CitriData/dataModel.Agrifood/blob/main/AgriFarmCarbonFootprint",
+
+    "entity_id": "https://schema.org/Text",
+    "area": "https://schema.org/Number",
+    "regadio": "https://schema.org/Number",
+    "pdtMedia": "https://schema.org/Number",
+    "densidad": "https://schema.org/Number",
+    "cob": "https://schema.org/Text",
+    "cobType": "https://schema.org/Text",
+    "eroCau": "https://schema.org/Number",
+    "eroEol": "https://schema.org/Number",
+    "eroLam": "https://schema.org/Number",
+    "eroPot": "https://schema.org/Number",
+    "movMasas": "https://schema.org/Number",
+    "codPais": "https://schema.org/Text",
+    "nomPais": "https://schema.org/Text",
+    "codComunidad": "https://schema.org/Number",
+    "nomComunidad": "https://schema.org/Text",
+    "codProvincia": "https://schema.org/Number",
+    "nomProvincia": "https://schema.org/Text",
+    "codMunicipio": "https://schema.org/Number",
+    "nomMunicipio": "https://schema.org/Text",
+    "codZona": "https://schema.org/Number",
+    "codPoligono": "https://schema.org/Number",
+    "codParcela": "https://schema.org/Number",
+    "dateLoad": "https://schema.org/Text",
+    "co30mean": "https://schema.org/Number",
+    "co60mean": "https://schema.org/Number",
+    "dataOwner": "https://schema.org/Text",
+    "dataProvider": "https://schema.org/Text",
+    "lat": "https://schema.org/Number",
+    "lon": "https://schema.org/Number"
+  }
+}
