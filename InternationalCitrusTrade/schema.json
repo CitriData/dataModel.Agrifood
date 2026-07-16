@@ -1,9 +1,221 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schemaVersion": "0.0.1",
   "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/InternationalCitrusTrade/schema.json",
   "title": "InternationalCitrusTrade",
+  "modelTags": [
+    "InternationalCitrusTrade",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
   "description": "Data model for international trade statistics of citrus products, based on sources such as UN Comtrade and aligned with global trade data standards. It captures key variables including origin/destination countries, HS codes, trade values, volumes, and time periods. Designed to support consistent analysis, comparison, and integration with economic data systems.",
   "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Unique identifier of the entity."
+        },
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be InternationalCitrusTrade.",
+          "enum": [
+            "InternationalCitrusTrade"
+          ]
+        },
+        "typeCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Type code of the trade record."
+        },
+        "freqCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Monthly'. Frequency code."
+        },
+        "refPeriodId": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'YYYYMM00'. Internal reference period identifier."
+        },
+        "refYear": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'YYYY'. Reference year of the trade record."
+        },
+        "refMonth": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'MM'. Reference month of the trade record."
+        },
+        "period": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'YYYYMM'. The period of the trade data."
+        },
+        "reporterCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the reporting country."
+        },
+        "reporterISO": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the reporting country."
+        },
+        "reporterDesc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Country'. Country or region reporting the trade."
+        },
+        "flowCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code identifying the trade flow type."
+        },
+        "flowDesc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Flow'. Description of the trade flow"
+        },
+        "partnerCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the primary partner country."
+        },
+        "partnerISO": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the primary partner country."
+        },
+        "partnerDesc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Country'. Primary trading partner country or region."
+        },
+        "partner2Code": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the secondary partner country."
+        },
+        "partner2ISO": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO Code of the secondary partner country."
+        },
+        "partner2Desc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Country'. Description of the second partner country."
+        },
+        "classificationCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Product classification code."
+        },
+        "classificationSearchCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Search code used for the classification."
+        },
+        "isOriginalClassification": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if original classification was used."
+        },
+        "cmdDesc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Products'. Commodity description"
+        },
+        "aggrLevel": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'Code'. Level of data aggregation."
+        },
+        "isLeaf": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if this is the lowest level of the product classification tree."
+        },
+        "customsCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Customs procedure code."
+        },
+        "customsDesc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Customs Procedure'. Description of the customs procedure."
+        },
+        "mosCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Supply code."
+        },
+        "motCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Transport code."
+        },
+        "motDesc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Mode of Transport'. Mode of Transport description."
+        },
+        "qtyUnitCode": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the quantity unit."
+        },
+        "qtyUnitAbbr": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'SI Units'. Abbreviation of the quantity unit."
+        },
+        "qty": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'qtyUnitAbbr'. Trade quantity"
+        },
+        "isQtyEstimated": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the quantity is estimated."
+        },
+        "altQtyUnitCode": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the alternative quantity unit."
+        },
+        "altQtyUnitAbbr": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Alternative units'. Abbreviation of the alternative quantity unit."
+        },
+        "altQty": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'altQtyUnitAbbr'. Alternative trade quantity if applicable."
+        },
+        "isAltQtyEstimated": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the alternative quantity is estimated."
+        },
+        "netWgt": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'kg'. Net weight."
+        },
+        "isNetWgtEstimated": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the net weight is estimated."
+        },
+        "grossWgt": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'kg'. Gross weight."
+        },
+        "isGrossWgtEstimated": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the gross weight is estimated."
+        },
+        "cifvalue": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. Cost, Insurance, and Freight (CIF) value."
+        },
+        "fobvalue": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. Free on Board (FOB) value."
+        },
+        "primaryValue": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. The primary statistical value recorded."
+        },
+        "legacyEstimationFlag": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Legacy system flag for estimations."
+        },
+        "isReported": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the data was explicitly reported by the country."
+        },
+        "isAggregate": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the data is aggregated."
+        }
+      }
+    }
+  ],
   "required": [
     "id",
     "type",
@@ -12,202 +224,6 @@
     "partnerCode",
     "flowCode"
   ],
-  "properties": {
-    "id": {
-      "type": "string",
-      "format": "uri",
-      "description": "Unique identifier of the entity."
-    },
-    "type": {
-      "type": "string",
-      "description": "Property. NGSI Entity Type. It has to be InternationalCitrusTrade.",
-      "enum": [
-        "InternationalCitrusTrade"
-      ]
-    },
-    "cmdDesc": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Products'. Commodity description"
-    },
-    "flowDesc": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Flow'. Description of the trade flow"
-    },
-    "reporterDesc": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Country'. Country or region reporting the trade."
-    },
-    "partnerDesc": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Country'. Primary trading partner country or region."
-    },
-    "qty": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'qtyUnitAbbr'. Trade quantity"
-    },
-    "qtyUnitAbbr": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'SI Units'. Abbreviation of the quantity unit."
-    },
-    "altQty": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'altQtyUnitAbbr'. Alternative trade quantity if applicable."
-    },
-    "altQtyUnitAbbr": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Alternative units'. Abbreviation of the alternative quantity unit."
-    },
-    "refYear": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'YYYY'. Reference year of the trade record."
-    },
-    "refMonth": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'MM'. Reference month of the trade record."
-    },
-    "motDesc": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Mode of Transport'. Mode of Transport description."
-    },
-    "cifvalue": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. Cost, Insurance, and Freight (CIF) value."
-    },
-    "classificationCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Product classification code."
-    },
-    "classificationSearchCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Search code used for the classification."
-    },
-    "customsCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Customs procedure code."
-    },
-    "customsDesc": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Customs Procedure'. Description of the customs procedure."
-    },
-    "flowCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code identifying the trade flow type."
-    },
-    "fobvalue": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. Free on Board (FOB) value."
-    },
-    "freqCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Monthly'. Frequency code."
-    },
-    "grossWgt": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'kg'. Gross weight."
-    },
-    "isAggregate": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the data is aggregated."
-    },
-    "aggrLevel": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'Code'. Level of data aggregation."
-    },
-    "isAltQtyEstimated": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the alternative quantity is estimated."
-    },
-    "isGrossWgtEstimated": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the gross weight is estimated."
-    },
-    "isLeaf": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if this is the lowest level of the product classification tree."
-    },
-    "isNetWgtEstimated": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the net weight is estimated."
-    },
-    "isOriginalClassification": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if original classification was used."
-    },
-    "isQtyEstimated": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the quantity is estimated."
-    },
-    "isReported": {
-      "type": "boolean",
-      "description": "Property. Model:'https://schema.org/Boolean'. Units: 'true/false'. Flag indicating if the data was explicitly reported by the country."
-    },
-    "legacyEstimationFlag": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Legacy system flag for estimations."
-    },
-    "mosCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Supply code."
-    },
-    "motCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Mode of Transport code."
-    },
-    "netWgt": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'kg'. Net weight."
-    },
-    "partner2Code": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the secondary partner country."
-    },
-    "partner2Desc": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Country'. Description of the second partner country."
-    },
-    "partner2ISO": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO Code of the secondary partner country."
-    },
-    "partnerCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the primary partner country."
-    },
-    "partnerISO": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the primary partner country."
-    },
-    "period": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'YYYYMM'. The period of the trade data."
-    },
-    "primaryValue": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'USD ($)'. The primary statistical value recorded."
-    },
-    "qtyUnitCode": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the quantity unit."
-    },
-    "altQtyUnitCode": {
-      "type": "number",
-      "description": "Property. Model:'https://schema.org/Number'. Units: 'Code'. Code for the alternative quantity unit."
-    },
-    "refPeriodId": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'YYYYMM00'. Internal reference period identifier."
-    },
-    "reporterCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Code of the reporting country."
-    },
-    "reporterISO": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'ISO Code'. ISO code of the reporting country."
-    },
-    "typeCode": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. Units: 'Code'. Type code of the trade record."
-    }
-  }
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES"
 }
