@@ -1,25 +1,25 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$schemaVersion": "0.0.1",
-  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/CitrusPackhouseOperation/schema.json",
-  "title": "Industria Agroalimentaria Sector Citrícola Andaluz",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/CitrusPackhouseOperation/schema.json",
+  "title": "CitrusPackhouseOperation",
   "modelTags": [
     "CitrusPackhouseOperation",
-    "CitriData",
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "Modelo de datos diseñado para la gestión operativa y la trazabilidad en la industria de transformación y envasado de cítricos. Permite registrar la entrada de lotes de materia prima, sus parámetros de calidad (calibres, madurez, ...), el control de los procesos de procesado o empaque, y el inventario de producto terminado listo para su distribución.",
+  "description": "Data model designed for operational management and traceability in the citrus transformation and packing industry. It records raw-material batch intake, quality parameters (calibers, ripeness, etc.), control of processing/packing operations, and finished-product inventory ready for distribution. It combines industry-supplied data on suppliers' parcels with parcel attributes extracted from SIGPAC. Sensitive identifiers are anonymized by hashing.",
   "type": "object",
   "allOf": [
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
       "properties": {
+        "id": {
+          "type": "string",
+          "description": "Property. Unique identifier of the entity."
+        },
         "type": {
           "type": "string",
           "description": "Property. NGSI Entity Type. It has to be CitrusPackhouseOperation.",
@@ -27,214 +27,190 @@
             "CitrusPackhouseOperation"
           ]
         },
-        "nomIndustria": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre Industria"
-        },
         "nomIndustriaHash": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Hash Industria"
+          "description": "Property. Model:'https://schema.org/Text'. Hashed identifier of the agri-food industry (packhouse)."
         },
         "nCampana": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Número Campaña"
+          "description": "Property. Model:'https://schema.org/Number'. Campaign number."
         },
         "campana": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Periodo Campaña"
-        },
-        "nomProveedor": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Producto"
+          "description": "Property. Model:'https://schema.org/Text'. Campaign period (season)."
         },
         "proveedorHash": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Hash Proveedor"
+          "description": "Property. Model:'https://schema.org/Text'. Hashed identifier of the product supplier."
         },
         "fecha": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha de entrega del Producto"
-        },
-        "nFila": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Número Fila"
+          "description": "Property. Model:'https://schema.org/DateTime'. Product delivery date."
         },
         "nPartida": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Número de partida dentro del cultivo y campaña."
+          "description": "Property. Model:'https://schema.org/Number'. Batch (lot) number within the crop and campaign."
         },
         "codCultivo": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Código de tipo de cultivo"
+          "description": "Property. Model:'https://schema.org/Number'. Crop type code."
         },
         "nomVariedad": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre Variedad"
+          "description": "Property. Model:'https://schema.org/Text'. Variety name."
         },
         "typeVariedad": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Tipo Variedad"
-        },
-        "nomCultivo": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre Cultivo y finca"
+          "description": "Property. Model:'https://schema.org/Number'. Variety type."
         },
         "nomCultivoHash": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre Cultivo y finca Hash"
-        },
-        "nomFinca": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre Finca"
+          "description": "Property. Model:'https://schema.org/Text'. Hashed identifier of the crop and estate."
         },
         "fincaHash": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Hash Finca"
+          "description": "Property. Model:'https://schema.org/Text'. Hashed identifier of the estate (finca)."
         },
         "usoSig": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Uso agronómico del terreno (SIG)"
+          "description": "Property. Model:'https://schema.org/Text'. Agronomic land use of the plot according to SIGPAC."
         },
         "supData": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Superficie parcela según datos proporcionados(ha)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'ha'. Parcel area according to supplied data."
         },
         "supSig": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Superficie parcela en SIG (ha)"
-        },
-        "codSigParcelas": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Referencias catastrales de Parcelas (SIG)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'ha'. Parcel area according to SIGPAC."
         },
         "sigParcelasHash": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Hash Referencias catastrales de Parcelas"
+          "description": "Property. Model:'https://schema.org/Text'. Hashed cadastral references of the parcels (SIGPAC)."
         },
         "perimParc": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Perímetro Parcelas en SIG (m)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'm'. Parcels perimeter according to SIGPAC."
         },
         "pesoCamion": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Peso Camión (kg)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'kg'. Truck weight."
         },
         "pesoTotal": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Peso Total (Tn)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 't'. Total weight."
         },
         "rendData": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Rendimiento según datos proporcionados (Tn/ha)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 't/ha'. Yield according to supplied data."
         },
         "rendSig": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Rendimiento calculado con datos SIG (Tn/ha)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 't/ha'. Yield calculated with SIGPAC data."
         },
         "prodData": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Producción según datos proporcionados (Tn)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 't'. Production according to supplied data."
         },
         "prodSig": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Producción calculada con datos SIG (Tn)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 't'. Production calculated with SIGPAC data."
         },
         "nomCalidad": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Calidad"
+          "description": "Property. Model:'https://schema.org/Text'. Quality category name."
         },
         "nCalidad": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Número Calidad"
+          "description": "Property. Model:'https://schema.org/Number'. Quality category number."
         },
         "nomCalibre": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Calibre"
+          "description": "Property. Model:'https://schema.org/Text'. Caliber (size) category name."
         },
         "nCalibre": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Número Calibre"
-        },
-        "giqc": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. GIQC"
+          "description": "Property. Model:'https://schema.org/Number'. Caliber category number."
         },
         "peso": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Peso asociado a cada categoría de calidad  (kg)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'kg'. Weight associated with each quality category."
+        },
+        "giqc": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. GIQC index (global internal quality coefficient)."
         },
         "porcentaje": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje que representa esa categoría respecto al total del lote (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage that this category represents of the batch total."
         },
         "iqc": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. IQC"
+          "description": "Property. Model:'https://schema.org/Number'. IQC index (internal quality coefficient)."
         },
         "filter": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Campo técnico de filtrado"
+          "description": "Property. Model:'https://schema.org/Text'. Technical filtering field."
         },
         "fechaPlan": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha asociada a la planificación"
+          "description": "Property. Model:'https://schema.org/Text'. Year associated with the plantation."
         },
         "coefRegad": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Coeficiente Regadío (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Irrigation coefficient."
+        },
+        "nFila": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Row number."
         },
         "oriDom": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Orientación Dominante"
-        },
-        "oriN": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con orientación Norte (%)"
-        },
-        "oriS": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con orientación Sur (%)"
+          "description": "Property. Model:'https://schema.org/Text'. Dominant orientation of the parcel."
         },
         "oriE": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con orientación Este (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with East orientation."
+        },
+        "oriN": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with North orientation."
+        },
+        "oriS": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with South orientation."
         },
         "oriW": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con orientación Oeste (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with West orientation."
         },
         "pdteMedia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Pendiente Media (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Mean slope of the parcel."
         },
         "pdte05": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con pendiente 0-5% (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with slope 0-5%."
         },
         "pdte510": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con pendiente 5-10% (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with slope 5-10%."
         },
         "pdte1030": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con pendiente 10-30% (%)"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with slope 10-30%."
         },
         "pdte30Max": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de superficie con pendiente >30% (%)"
-        },
-        "dateLoad": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Año de referencia valores"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Percentage of surface with slope greater than 30%."
         },
         "dataOwner": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Propietario del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Owner of the data."
         },
         "dataProvider": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data Provider."
         }
       }
     }
