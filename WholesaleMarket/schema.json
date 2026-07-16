@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$schemaVersion": "0.0.1",
-  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/WholesaleMarket/schema.json",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/WholesaleMarket/schema.json",
   "title": "Mercados mayoristas de España",
   "modelTags": [
     "WholesaleMarket",
@@ -9,7 +9,7 @@
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "Modelo de datos diseñado para representar la actividad, precios de cotización e infraestructura de los mercados mayoristas de alimentación. Permite registrar el volumen de mercancías entrantes/salientes, los precios máximos, mínimos y modales por variedad de producto, y la gestión operativa de las plataformas logísticas alimentarias. Datos del año 2020 al 2024",
+  "description": "Data model designed to represent the activity, trading price ranges (minimum and maximum) and infrastructure of wholesale food markets (Mercas network). It allows recording the volume of incoming/outgoing goods, maximum, minimum and modal prices by product variety, and the operational management of food logistics platforms. Covering data from 2020 to 2024.This offering is restricted to citrus product varieties.",
   "type": "object",
   "allOf": [
     {
@@ -27,47 +27,47 @@
             "WholesaleMarket"
           ]
         },
-        "startPrice": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Precio Inicio Periodo"
-        },
-        "endPrice": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Precio Fin Periodo"
-        },
-        "market": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Mercado"
-        },
         "product": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Producto"
-        },
-        "period": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Periodo de Exploración"
+          "description": "Property. Model:'https://schema.org/Text'. Product"
         },
         "year": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Año"
+          "description": "Property. Model:'https://schema.org/Number'. Year"
         },
         "week": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Semana"
+          "description": "Property. Model:'https://schema.org/Number'. Week"
+        },
+        "startPrice": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: '€'. Start Period Price of the week"
+        },
+        "endPrice": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: '€'. End Period Price of the week"
+        },
+        "market": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Market"
+        },
+        "period": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Survey Period"
         },
         "dataOwner": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Propietario del dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data Owner"
         },
         "dataProvider": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Proveedor del dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data Provider"
         }
       }
     }
   ],
   "required": [
-    "id",
+    "product",
     "type"
   ],
   "derivedFrom": "SDM Schema",

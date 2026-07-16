@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "WholesaleMarket": "https://github.com/CitriData/dataModel.Agrifood/blob/main/WholesaleMarket",
+
+    "product": "https://schema.org/Text",
+    "year": "https://schema.org/Number",
+    "week": "https://schema.org/Number",
+    "startPrice": "https://schema.org/Number",
+    "endPrice": "https://schema.org/Number",
+    "market": "https://schema.org/Text",
+    "period": "https://schema.org/Text",
+    "dataOwner": "https://schema.org/Text",
+    "dataProvider": "https://schema.org/Text"
+  }
+}
