@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$schemaVersion": "0.0.1",
-  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/FruitFlyTrapMeasurement/schema.json",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/FruitFlyTrapMeasurement/schema.json",
   "title": "Monitorización de Ceratitis",
   "modelTags": [
     "FruitFlyTrapMeasurement",
@@ -9,7 +9,7 @@
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "Monitorización de Ceratitis del parcelario Citrícola Andaluz para los años 2023 y 2024",
+  "description": "Monitoring of Ceratitis capitata in Andalusian citrus polygons from 2023 and 2024. Weekly data",
   "type": "object",
   "allOf": [
     {
@@ -29,96 +29,96 @@
         },
         "dateLoad": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Año de referencia valores"
+          "description": "Property. Model:'https://schema.org/Text'. Reference year of values"
         },
         "mtd": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Moscas Trampa Día"
+          "description": "Property. Model:'https://schema.org/Number'. Fly Trap Day"
         },
         "nuArea": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Área Total de las parcelas cítrico en el Polígono"
+          "description": "Property. Model:'https://schema.org/Number'.Units: 'm²'. Total area of citrus parcels in the Polygon"
         },
         "flyTraps": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Trampas por polígono"
+          "description": "Property. Model:'https://schema.org/Number'. Traps per polygon"
         },
         "flyCapture": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Capturas totales"
+          "description": "Property. Model:'https://schema.org/Number'. Total captures"
         },
         "pdteAvg": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Pendiente media del Polígono"
+          "description": "Property. Model:'https://schema.org/Number'. Units: '%'. Average slope of the Polygon"
         },
         "deraNombre": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Nombre del Paisaje"
+          "description": "Property. Model:'https://schema.org/Text'. Landscape Name Code"
         },
         "deraPaisaje": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Tipo de Paisaje"
+          "description": "Property. Model:'https://schema.org/Text'. Landscape Type Code"
         },
         "deraArea": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Areas de Paisaje"
+          "description": "Property. Model:'https://schema.org/Text'. Landscape Areas Code"
         },
         "deraUnidad": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Unidad Fisiografica Terrestre"
+          "description": "Property. Model:'https://schema.org/Text'. Terrestrial Physiographic Unit Code"
         },
         "deraSist": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Sistema Fisiografico Terreste"
+          "description": "Property. Model:'https://schema.org/Text'. Terrestrial Physiographic System Code"
         },
         "deraFisio": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Valor Fisioiografico Único"
+          "description": "Property. Model:'https://schema.org/Text'. Unique Physiographic Value Code"
         },
         "deraDomin": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Dominio Fisiografico"
+          "description": "Property. Model:'https://schema.org/Text'. Physiographic Domain Code"
         },
         "deraAltim": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Valor de la altimetria"
+          "description": "Property. Model:'https://schema.org/Text'. Altimetry Value Code"
         },
         "deraRango": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Rango altimetrico"
+          "description": "Property. Model:'https://schema.org/Text'. Altimetric range"
         },
         "deraTipo": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Tipo de Clima"
+          "description": "Property. Model:'https://schema.org/Text'. Climate Type Code"
         },
         "location": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Latitud/Longitud"
+          "description": "Property. Model:'https://schema.org/Text'. Latitude/Longitude"
         },
         "dataOwner": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Propietario del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data Owner"
         },
         "dataProvider": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Proveedor del Dato"
+          "description": "Property. Model:'https://schema.org/Text'. Data Provider"
         },
         "datecreate": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Creación"
+          "description": "Property. Model:'https://schema.org/Text'. Creation Date"
         },
         "lat": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Latitud centroide"
+          "description": "Property. Model:'https://schema.org/Number'. Centroid latitude of the polygon"
         },
         "lon": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Longitud centroide"
+          "description": "Property. Model:'https://schema.org/Number'. Centroid longitude of the polygon"
         },
         "nWeek": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Número Semana"
+          "description": "Property. Model:'https://schema.org/Number'. Week Number"
         }
       }
     }

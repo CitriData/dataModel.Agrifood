@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "FruitFlyTrapMeasurement": "https://github.com/CitriData/dataModel.Agrifood/blob/main/FruitFlyTrapMeasurement",
+
+    "entity_id": "https://schema.org/Text",
+    "dateLoad": "https://schema.org/Text",
+    "mtd": "https://schema.org/Number",
+    "nuArea": "https://schema.org/Number",
+    "flyTraps": "https://schema.org/Number",
+    "flyCapture": "https://schema.org/Number",
+    "pdteAvg": "https://schema.org/Number",
+    "deraNombre": "https://schema.org/Text",
+    "deraPaisaje": "https://schema.org/Text",
+    "deraArea": "https://schema.org/Text",
+    "deraUnidad": "https://schema.org/Text",
+    "deraSist": "https://schema.org/Text",
+    "deraFisio": "https://schema.org/Text",
+    "deraDomin": "https://schema.org/Text",
+    "deraAltim": "https://schema.org/Text",
+    "deraRango": "https://schema.org/Text",
+    "deraTipo": "https://schema.org/Text",
+    "location": "https://schema.org/Text",
+    "dataOwner": "https://schema.org/Text",
+    "dataProvider": "https://schema.org/Text",
+    "datecreate": "https://schema.org/Text",
+    "lat": "https://schema.org/Number",
+    "lon": "https://schema.org/Number",
+    "nWeek": "https://schema.org/Number"
+  }
+}
