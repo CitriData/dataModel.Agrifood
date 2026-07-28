@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "AgroWeatherStation": "https://github.com/CitriData/dataModel.Agrifood/blob/main/AgroWeatherStation",
+
+    "temperature": "https://schema.org/Number",
+    "humidity": "https://schema.org/Number",
+    "radiacion": "https://schema.org/Number",
+    "windDir": "https://schema.org/Number",
+    "windVel": "https://schema.org/Number",
+    "pluviometer": "https://schema.org/Number",
+    "dataOwner": "https://schema.org/Text",
+    "dataProvider": "https://schema.org/Text",
+    "location": "https://schema.org/GeoCoordinates",
+    "datecreate": "https://schema.org/Text"
+  }
+}

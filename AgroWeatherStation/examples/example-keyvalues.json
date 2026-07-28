@@ -1,0 +1,20 @@
+{
+  "type": "AgroWeatherStation",
+  "id": "urn:ngsi-ld:citri.em.siar:siar-co01",
+  "datecreate": "2026-07-28T00:00:00.000Z",
+  "temperature": 22.889999389648438,
+  "humidity": 36.29999923706055,
+  "pluviometer": 0,
+  "radiacion": 0,
+  "windDir": 57.93000030517578,
+  "windVel": 0.0860000029206276,
+  "dataOwner": "Red de estaciones SIAR",
+  "dataProvider": "Plataforma AgroFIWARE",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -5.20956346230389,
+      38.25439453383958
+    ]
+  }
+}

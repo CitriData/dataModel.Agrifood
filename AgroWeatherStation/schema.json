@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/AgroWeatherStation/schema.json",
+  "title": "Estaciones Virtuales Zona Montilla/Moriles",
+  "modelTags": [
+    "AgroWeatherStation",
+    "CitriData",
+    "UCO",
+    "ATDFIWARE"
+  ],
+  "description": "Standard Smart Data Model proposed for datasets from agricultural weather stations, including both physical and virtual stations based on prediction models and high-resolution meteorological reanalysis.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Description"
+        },
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity Type. It has to be AgroWeatherStation.",
+          "enum": [
+            "AgroWeatherStation"
+          ]
+        },
+        "temperature": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'.Units: 'ºC'. Temperature"
+        },
+        "humidity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'.Units: '%'. Humidity"
+        },
+        "radiacion": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'.Units: 'W/m2'. Radiation"
+        },
+        "windDir": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'.Units: 'º from North'. Wind Direction"
+        },
+        "windVel": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'.Units: 'm/s'. Wind Speed"
+        },
+        "pluviometer": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'.Units: 'mm'. Precipitation"
+        },
+        "dataOwner": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Data Owner"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Data Provider"
+        },
+        "location": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/GeoCoordinates'. Latitude/Longitude"
+        },
+        "datecreate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Update"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ],
+  "derivedFrom": "SDM Schema",
+  "license": "CC BY 4.0 ES"
+}
