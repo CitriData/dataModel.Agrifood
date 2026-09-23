@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$schemaVersion": "0.0.1",
-  "$id": "https://raw.githubusercontent.com/CitriData/dataModel.Agrifood/refs/heads/main/VineyardMildewEvolution/schema.json",
+  "$id": "https://github.com/CitriData/dataModel.Agrifood/blob/main/VineyardMildewEvolution/schema.json",
   "title": "Seguimiento Mildiu Montilla/Moriles Año 2026",
   "modelTags": [
     "VineyardMildewEvolution",
@@ -9,7 +9,7 @@
     "UCO",
     "ATDFIWARE"
   ],
-  "description": "Modelo para el seguimiento predictivo del mildiu (Plasmopara viticola) en viticultura. Cuantifica el impacto de las condiciones ambientales sobre el desarrollo de la enfermedad para el soporte a la toma de decisiones agrícolas.",
+  "description": "Data model for the predictive monitoring of grapevine downy mildew (Plasmopara viticola) in the Montilla-Moriles wine-growing area (Córdoba, Spain) during the 2026 season. Each record holds the daily state of an epidemiological model linked to a SIAR agro-meteorological station: oospore maturation and germination, crop susceptibility, primary infection, Goidanich incubation, appearance of the first oil spot and secondary infections, together with the daily weather variables that drive them. It is intended to support decision-making on vineyard disease management.",
   "type": "object",
   "allOf": [
     {
@@ -20,6 +20,11 @@
     },
     {
       "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Unique identifier of the entity."
+        },
         "type": {
           "type": "string",
           "description": "Property. NGSI Entity Type. It has to be VineyardMildewEvolution.",
@@ -30,144 +35,147 @@
         "fechaExploracion": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha de exploración"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha y hora de la ejecución del modelo a la que corresponde el estado diario registrado"
         },
         "status": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Estado Maduración"
+          "description": "Property. Model:'https://schema.org/Text'. Estado fenológico del ciclo del mildiu en la fecha de exploración, expresado como texto descriptivo de la fase o regla del modelo alcanzada (p. ej. 'No se ha llegado a maduración (1ª regla)')"
+        },
+        "porcentajeModelo": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Porcentaje de avance global del modelo de mildiu en la campaña, desde el inicio hasta la aparición de la primera mancha"
         },
         "porcentajeAcumuladoMaduracion": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje Acumulado Maduración"
+          "description": "Property. Model:'https://schema.org/Number'. Porcentaje acumulado de maduración de las oosporas invernantes; al alcanzar el 100 % se considera que las oosporas están maduras y pueden germinar"
         },
         "fechaMaduracion": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Maduración"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha en la que se alcanza la maduración de las oosporas (100 % de maduración acumulada). Nulo si aún no se ha alcanzado"
         },
         "puedeGerminar": {
           "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Puede Germinar"
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si se cumplen las condiciones para la germinación de las oosporas maduras (oosporas maduras y lluvia suficiente)"
         },
         "lluviaAcumulada48h": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Lluvia Acumulada 48h"
+          "description": "Property. Model:'https://schema.org/Number'. Precipitación acumulada durante las últimas 48 horas, utilizada para evaluar la condición de germinación de las oosporas"
         },
         "fechaPrimeraGerminacion": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Primera Germinación"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha en la que se detecta la primera germinación de oosporas en la campaña. Nulo si aún no se ha producido"
         },
         "esSusceptible": {
           "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Susceptible"
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si el viñedo se encuentra en estado fenológico susceptible a la infección por mildiu"
         },
         "fechaSusceptibilidad": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Susceptibilidad"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha a partir de la cual el viñedo se considera susceptible a la infección. Nulo si aún no se ha alcanzado"
         },
         "puedeInfectar": {
           "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Puede infectar"
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si se dan simultáneamente las condiciones necesarias para una infección primaria (germinación, susceptibilidad del cultivo y condiciones meteorológicas favorables)"
         },
         "mojadoFoliar": {
           "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Mojado Foliar"
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si se ha registrado humectación foliar suficiente para permitir la infección"
         },
         "suma25t": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Suma 25t"
+          "description": "Property. Model:'https://schema.org/Number'. Suma térmica acumulada durante el periodo de humectación, comparada con el umbral de 25 para evaluar la condición de infección"
+        },
+        "suma50t": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Suma térmica acumulada durante el periodo de humectación, comparada con el umbral de 50 para evaluar la condición de infección"
         },
         "fechaInfeccion": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Infección"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha en la que se produce la infección primaria. Nulo si aún no se ha producido"
         },
         "puedeAparecer": {
           "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Puede aparecer Mancha"
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si, tras una infección, el periodo de incubación está suficientemente avanzado como para que puedan aparecer las primeras manchas de aceite"
         },
         "porcentajeAcumuladoGoidanich": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. porcentaje Acumulado Goidanich"
+          "description": "Property. Model:'https://schema.org/Number'. Porcentaje acumulado del periodo de incubación calculado según el modelo de Goidanich a partir de la temperatura y humedad diarias; el 100 % marca el final de la incubación"
         },
         "fechaIncubacion70": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Incubación 70"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha en la que la incubación acumulada (Goidanich) alcanza el 70 %. Nulo si aún no se ha alcanzado"
         },
         "fechaIncubacion100": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha Incubación 100"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha en la que la incubación acumulada (Goidanich) alcanza el 100 %. Nulo si aún no se ha alcanzado"
+        },
+        "puedeIncubacion": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si existe una infección en curso cuyo periodo de incubación está progresando"
+        },
+        "porcentajeAcumuladoMancha": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Porcentaje acumulado hacia la aparición de la primera mancha de aceite visible en hoja"
+        },
+        "fechaMancha": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Fecha estimada de aparición de la primera mancha de aceite. Nulo si aún no se ha alcanzado"
+        },
+        "probabilidadPrimeraManchaHoy": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Probabilidad estimada de que la primera mancha de aceite aparezca en el día de la exploración"
+        },
+        "esporulacionNocturnaHoy": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si en la noche del día de exploración se han dado condiciones favorables para la esporulación (formación de esporangios sobre las manchas)"
+        },
+        "sporasInviablesPorCalorHoy": {
+          "type": "boolean",
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si las temperaturas elevadas del día han hecho inviables las esporas formadas, impidiendo infecciones secundarias"
         },
         "infeccionSecundariaHoy": {
           "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Infección Secundaria Hoy"
+          "description": "Property. Model:'https://schema.org/Boolean'. Indica si en el día de exploración se ha producido una infección secundaria a partir de esporangios de manchas existentes"
         },
         "fechaPrimeraInfeccionSecundaria": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha primera infección secundaria"
+          "description": "Property. Model:'https://schema.org/Text'. Fecha de la primera infección secundaria de la campaña. Nulo si aún no se ha producido"
         },
         "fechasFallidasSegundaInfeccion": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Fechas Fallidas Segunda Infección"
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": "Property. Model:'https://schema.org/Text'. Lista de fechas en las que se iniciaron condiciones de infección secundaria que finalmente no llegaron a completarse"
         },
         "tempMediaDia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Temperatura Media Diaria"
+          "description": "Property. Model:'https://schema.org/Number'. Temperatura media del aire del día, obtenida de la estación meteorológica asociada"
         },
         "tempMaxDia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Temperatura Máxima Diaria"
+          "description": "Property. Model:'https://schema.org/Number'. Temperatura máxima del aire del día, obtenida de la estación meteorológica asociada"
         },
         "tempMinDia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Temperatura Mínima Diaria"
+          "description": "Property. Model:'https://schema.org/Number'. Temperatura mínima del aire del día, obtenida de la estación meteorológica asociada"
         },
         "humedadMediaDia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Humedad Media Diaria"
+          "description": "Property. Model:'https://schema.org/Number'. Humedad relativa media del aire del día, obtenida de la estación meteorológica asociada"
         },
         "precipitacionDia": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Precipitación Diaria"
-        },
-        "esporulacionNocturnaHoy": {
-          "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Esporulación Nocturna Hoy"
-        },
-        "sporasInviablesPorCalorHoy": {
-          "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Esporas Inviables por Calor Hoy"
-        },
-        "porcentajeModelo": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Porcentaje del modelo"
-        },
-        "horizonteDias": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Horizonte días"
-        },
-        "fechaEmision": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha de emision"
-        },
-        "fechaSolicitada": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha de solicitada"
-        },
-        "fechaObjetivo": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Fecha objetivo"
-        },
-        "probabilidadPrimeraManchaHoy": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Probabilidad primera mancha hoy"
+          "description": "Property. Model:'https://schema.org/Number'. Precipitación total registrada en el día, obtenida de la estación meteorológica asociada"
         }
       }
     }
